@@ -39,6 +39,11 @@ body {
     padding: 30px;
 }
 
+.animate__backInDown {
+    animation: backInDown;
+    animation-duration: 2s;
+}
+
 nav ul {
     grid-area: nav;
     display: flex;
@@ -71,7 +76,9 @@ nav a {
 
 nav a:hover {
     grid-area: nav;
-    background-color: grey;
+    background-image: linear-gradient(lightcoral, white);
+    transform: scale(1.1);
+    transition: all .5s;
 }
 
 .titulo {
@@ -82,7 +89,8 @@ nav a:hover {
     text-align: center;
     text-shadow: 0 0 10px rgb(231, 86, 185);
     color: rgb(74, 73, 73);
-
+    animation: zoomIn;
+    animation-duration: 2s;
 }
 
 .textoIzq {
@@ -105,6 +113,7 @@ nav a:hover {
     grid-area: img;
     display: flex;
     text-align: center;
+    flex-direction: column;
 }
 
 .img1 {
@@ -233,19 +242,15 @@ footer div {
 
     .imagenesInicio {
         grid-area: img;
-        display: flex;
         text-align: center;
     }
 
     .img1 {
-        display: flex;
-        align-items: center;
-
+        text-align: center;
     }
 
     .img2 {
-        display: flex;
-        align-items: center;
+        text-align: center;
     }
 
     .publicidad {
@@ -326,13 +331,6 @@ footer div {
         grid-area: img
     }
 
-    .img1 {
-        padding-left: 50px;
-    }
-
-    .img2 {
-        padding-left: 50px;
-    }
 
     .publicidadimg1 {
         grid-area: publicidad;
@@ -410,6 +408,7 @@ nav {
     display: flex;
     flex-direction: column;
 }
+
 nav li {
     grid-area: nav;
     display: flex;
@@ -433,7 +432,7 @@ nav li {
     grid-area: formulario;
     padding: 20px;
     width: 100%;
-    max-width:60%;
+    max-width: 60%;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -459,8 +458,9 @@ nav li {
     width: 30%;
     height: 10%;
     font-size: medium;
-    font-family:'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
+
 .boton:hover {
     background-color: lightslategray;
 }
@@ -550,6 +550,7 @@ footer div {
     }
 
 }
+
 /* Vista Desktop CONTACTO */
 @media screen and (min-width:1200px) {
 
@@ -615,6 +616,7 @@ footer div {
         border-radius: 10%;
     }
 }
+
 /* PRODUCTOS */
 /* First Mobile */
 .gridContainerProd {
@@ -637,10 +639,12 @@ footer div {
     font-size: larger;
     background-color: lightpink;
 }
+
 .productos {
     grid-area: productos;
     background-image: url(../img/fondotexto.webp);
 }
+
 .productos ul {
     border: dotted grey;
 }
@@ -658,6 +662,7 @@ footer div {
             "footer footer";
     }
 }
+
 /* Vista Desktop PRODUCTOS */
 @media screen and (min-width:1200px) {
 
@@ -672,6 +677,7 @@ footer div {
     }
 
 }
+
 /* SUCURSALES */
 /* First Mobile */
 .gridContainerSuc {
@@ -694,6 +700,7 @@ footer div {
     font-size: larger;
     background-color: lightpink;
 }
+
 .sucursales {
     grid-area: sucursales;
     background-image: url(../img/fondotexto.webp);
@@ -712,6 +719,7 @@ footer div {
             "footer footer";
     }
 }
+
 /* Vista Desktop SUCURSALES */
 @media screen and (min-width:1200px) {
 
@@ -725,6 +733,7 @@ footer div {
             "footer footer footer";
     }
 }
+
 /* TRATAMIENTOS */
 /* First Mobile */
 .gridContainerTrat {
@@ -747,6 +756,7 @@ footer div {
     font-size: larger;
     background-color: lightpink;
 }
+
 .tratamientos {
     grid-area: tratamientos;
     background-image: url(../img/fondotexto.webp);
@@ -767,6 +777,7 @@ footer div {
             "footer footer";
     }
 }
+
 /* Vista Desktop TRATAMIENTOS */
 @media screen and (min-width:1200px) {
 
