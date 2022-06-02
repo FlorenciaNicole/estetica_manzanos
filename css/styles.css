@@ -12,7 +12,7 @@ body {
     height: auto;
 }
 
-.gridContainer {
+/* .gridContainer {
     display: grid;
     grid-template-columns: 4fr;
     grid-template-rows: 2fr;
@@ -24,9 +24,9 @@ body {
         "publicidad"
         "textoFinal"
         "footer";
-}
+} */
 
-.header .logo {
+.logo {
     grid-area: header;
     border-radius: 50%;
     height: 180px;
@@ -105,8 +105,6 @@ nav a:hover {
     border: outset;
     background-color: rgb(250, 215, 229);
     flex-direction: row;
-    height: max-content;
-    width: auto;
 }
 
 .imagenesInicio {
@@ -118,9 +116,8 @@ nav a:hover {
 
 .img1 {
     grid-area: img;
-    height: 250px;
-    border-radius: 25%;
-    margin: 20px;
+    height: 400px;
+    padding: 20px;
 }
 
 .img2 {
@@ -206,7 +203,7 @@ footer div {
 
 /* Vista tablet */
 @media screen and (min-width:768px) {
-    .gridContainer {
+    /* .gridContainer {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: repeat(7, auto);
         grid-template-areas: "header header"
@@ -216,7 +213,7 @@ footer div {
             "publicidad publicidad"
             "textoFinal textoFinal"
             "footer footer";
-    }
+    } */
 
     header {
         grid-area: header;
@@ -236,8 +233,7 @@ footer div {
 
     .textoIzq {
         grid-area: textoIzq;
-        width: 220px;
-        height: 500px;
+        font-weight: 300;
     }
 
     .imagenesInicio {
@@ -376,7 +372,7 @@ footer div {
 }
 
 /* CONTACTO */
-.gridContainerContacto {
+/* .gridContainerContacto {
     display: grid;
     grid-template-columns: 4fr;
     grid-template-rows: 2fr;
@@ -386,7 +382,7 @@ footer div {
         "tituloContacto"
         "formulario"
         "footer";
-}
+} */
 
 .header .logo {
     grid-area: header;
@@ -619,7 +615,7 @@ footer div {
 
 /* PRODUCTOS */
 /* First Mobile */
-.gridContainerProd {
+/* .gridContainerProd {
     display: grid;
     grid-template-columns: 4fr;
     grid-template-rows: 2fr;
@@ -630,7 +626,7 @@ footer div {
         "productos"
         "footer";
 }
-
+ */
 .tituloProd {
     grid-area: tituloProd;
     text-align: center;
@@ -680,7 +676,7 @@ footer div {
 
 /* SUCURSALES */
 /* First Mobile */
-.gridContainerSuc {
+/* .gridContainerSuc {
     display: grid;
     grid-template-columns: 4fr;
     grid-template-rows: 2fr;
@@ -690,7 +686,7 @@ footer div {
         "tituloSuc"
         "sucursales"
         "footer";
-}
+} */
 
 .tituloSuc {
     grid-area: tituloSuc;
@@ -704,6 +700,10 @@ footer div {
 .sucursales {
     grid-area: sucursales;
     background-image: url(../img/fondotexto.webp);
+}
+
+.sucursales li{
+    list-style: none;
 }
 
 /* Vista tablet SUCURSALES */
@@ -736,7 +736,7 @@ footer div {
 
 /* TRATAMIENTOS */
 /* First Mobile */
-.gridContainerTrat {
+/* .gridContainerTrat {
     display: grid;
     grid-template-columns: 4fr;
     grid-template-rows: 2fr;
@@ -746,7 +746,7 @@ footer div {
         "tituloTrat"
         "tratamientos"
         "footer";
-}
+} */
 
 .tituloTrat {
     grid-area: tituloTrat;
@@ -790,4 +790,14 @@ footer div {
             "tratamientos tratamientos tratamientos"
             "footer footer footer";
     }
+}
+
+.btn {
+    background-color: pink;
+    border: solid salmon;
+}
+
+.btn:hover {
+    background-color: lightgrey;
+
 }
