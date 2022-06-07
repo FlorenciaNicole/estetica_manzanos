@@ -156,6 +156,36 @@ nav a:hover {
 }
 
 footer {
+    clear: both;
+    display: inline;
+    float: left;
+    background: lightpink;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+}
+
+footer p {
+    color: #fff;
+    font-size: 12px;
+    text-align: center;
+}
+
+footer img {
+    padding: 0 0 0 10px;
+    width: auto;
+    vertical-align: middle;
+    text-align: center;
+}
+
+footer a:link,
+footer a:active,
+footer a:visited,
+footer a:hover {
+    color: #fff;
+}
+
+/* footer {
     margin: 5px;
     padding: 5px;
     font-family: 'Montserrat', sans-serif;
@@ -194,7 +224,7 @@ footer div {
     border-top: solid black;
     border-bottom: solid black;
     color: black;
-}
+} */
 
 .mapa {
     height: 100px;
@@ -249,28 +279,12 @@ footer div {
         text-align: center;
     }
 
-    .publicidad {
-        grid-area: publicidad;
-    }
-
-    .publicidadimg1 {
-        width: 0;
-        height: 0;
-    }
-
-    .publicidadimg2 {
-        width: 700px;
-        height: 100px;
-        border: solid grey;
-        margin: 10px;
-        padding: 10px;
-    }
 
     .textoFinal {
         grid-area: textoFinal;
     }
-
-    .footer {
+}
+/*     .footer {
         grid-area: footer;
         display: flex;
         flex-direction: row;
@@ -291,7 +305,7 @@ footer div {
     .mapa {
         border-radius: 10%;
     }
-}
+} */
 
 @media screen and (min-width:1200px) {
 
@@ -418,10 +432,14 @@ nav li {
 .tituloContacto {
     grid-area: tituloContacto;
     text-align: center;
-    border-top: dotted grey;
-    border-bottom: dotted grey;
     font-size: larger;
     background-color: lightpink;
+}
+
+.formulario {
+    background-image: url(../img/fondoContacto.webp);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 .formularioContacto {
@@ -434,7 +452,6 @@ nav li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url(../img/fondotexto.webp);
 }
 
 .formularioContacto li {
@@ -443,7 +460,7 @@ nav li {
     text-align: center;
     display: flex;
     flex-direction: column;
-    padding: 5px;
+    padding: 10px;
 }
 
 .boton {
@@ -465,7 +482,7 @@ nav li {
     grid-area: footer;
 }
 
-footer {
+/* footer div p {
     margin: 5px;
     padding: 5px;
     font-family: 'Montserrat', sans-serif;
@@ -474,11 +491,11 @@ footer {
     color: #f37dfb;
     display: flex;
     align-items: center;
-    justify-content: center;
-    flex-direction: column;
-}
+    justify-content: space-between;
+    flex-direction: row;
+} */
 
-footer ul {
+/* footer ul {
     grid-area: footer;
     list-style: none;
     display: flex;
@@ -500,7 +517,7 @@ footer div {
     border-top: solid black;
     border-bottom: solid black;
     color: black;
-}
+} */
 
 .mapa {
     border-radius: 10px;
@@ -524,8 +541,6 @@ footer div {
     .tituloContacto {
         grid-area: tituloContacto;
         text-align: center;
-        border-top: dotted grey;
-        border-bottom: dotted grey;
     }
 
     .formularioContacto {
@@ -577,8 +592,6 @@ footer div {
     .tituloContacto {
         grid-area: tituloContacto;
         text-align: center;
-        border-top: dotted grey;
-        border-bottom: dotted grey;
 
     }
 
@@ -630,19 +643,24 @@ footer div {
 .tituloProd {
     grid-area: tituloProd;
     text-align: center;
-    border-top: dotted grey;
-    border-bottom: dotted grey;
     font-size: larger;
     background-color: lightpink;
 }
 
 .productos {
     grid-area: productos;
-    background-image: url(../img/fondotexto.webp);
 }
 
 .productos ul {
-    border: dotted grey;
+    border: solid grey;
+}
+
+.tarjetas {
+    display: flex;
+    justify-content: center;
+    background-image: url(../img/fondoRosa.webp);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
 /* Vista tablet PRODUCTOS */
@@ -657,6 +675,7 @@ footer div {
             "productos productos"
             "footer footer";
     }
+
 }
 
 /* Vista Desktop PRODUCTOS */
@@ -691,18 +710,18 @@ footer div {
 .tituloSuc {
     grid-area: tituloSuc;
     text-align: center;
-    border-top: dotted grey;
-    border-bottom: dotted grey;
     font-size: larger;
     background-color: lightpink;
 }
 
 .sucursales {
     grid-area: sucursales;
-    background-image: url(../img/fondotexto.webp);
+    background-image: url(../img/fondoSuc.webp);
+    background-size: cover;
+    background-attachment: fixed;
 }
 
-.sucursales li{
+.sucursales li {
     list-style: none;
 }
 
@@ -751,19 +770,35 @@ footer div {
 .tituloTrat {
     grid-area: tituloTrat;
     text-align: center;
-    border-top: dotted grey;
-    border-bottom: dotted grey;
     font-size: larger;
     background-color: lightpink;
 }
 
 .tratamientos {
     grid-area: tratamientos;
-    background-image: url(../img/fondotexto.webp);
     font-size: large;
     padding: 20px;
 }
 
+.trat1 {
+    background-image: linear-gradient(to bottom, pink, lightgrey);
+}
+
+.trat2 {
+    background-image: linear-gradient(to bottom, lightgrey, pink);
+}
+
+.trat3 {
+    background-image: linear-gradient(to bottom, pink, lightgrey);
+}
+
+.trat4 {
+    background-image: linear-gradient(to bottom, lightgrey, pink);
+}
+
+.trat5 {
+    background-image: linear-gradient(to bottom, pink, lightgrey);
+}
 /* Vista tablet TRATAMIENTOS */
 @media screen and (min-width:768px) {
     .gridContainerTrat {
@@ -792,12 +827,13 @@ footer div {
     }
 }
 
-.btn {
+.botonComprar {
     background-color: pink;
     border: solid salmon;
 }
 
-.btn:hover {
+.botonComprar:hover {
     background-color: lightgrey;
 
 }
+
