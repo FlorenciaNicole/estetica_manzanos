@@ -1,0 +1,143 @@
+@import 'variables';
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: linear-gradient(to top, lightgrey, white);
+    text-align: center;
+}
+/* Index */
+.logo {
+    grid-area: header;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    margin: auto;
+    border-radius: 25%;
+    padding: 30px;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 1px;
+    align-items: center;
+
+    li {
+        margin: 1px;
+        padding: 5px;
+        list-style: none;
+        font-family: $font-principal;
+
+        a {
+            margin: 1px;
+            padding: 10px;
+            background-color: #F7B2AD;
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+            border-radius: 10px;
+            font-family: $font-principal;
+
+            &:hover {
+                background-image: linear-gradient(lightcoral, white);
+                transform: scale(1.1);
+                transition: all .5s;
+
+            }
+        }
+    }
+}
+
+.tituloTexto {
+    padding: 5px;
+    margin: 5px;
+    font-family: $font-principal;
+    text-shadow: 0 0 10px $color-borde;
+    color: $color-texto-primario;
+    animation: zoomIn;
+    animation-duration: 2s;
+}
+
+.textoInicio {
+    margin: 15px;
+    padding: 15px;
+    font-weight: bold;
+    line-height: 1.5;
+    font-style: italic;
+    border: outset;
+    background-color: $color-secundario;
+    text-align: justify;
+}
+
+.imgPrincipal {
+    width: 800px;
+    height: 400px;
+}
+
+.textoFinal {
+    padding: 15px;
+    font-family: $font-principal;
+}
+footer {
+    clear: both;
+    display: inline;
+    float: left;
+    background: $color-secundario;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    font-family: $font-principal;
+    p{
+        color: $color-texto-secundario;
+        font-size: 12px;
+        text-align: center;
+        a{
+            color: $color-texto-secundario;
+            img {
+                padding: 0 0 0 10px;
+                width: auto;
+                vertical-align: middle;
+                text-align: center;
+            }
+    }
+}
+}
+
+@media screen and (max-width: 800px){
+    .imgPrincipal {
+        width: 700px;
+        height: 300px;
+        padding: 15px;
+    }
+}
+
+/* Productos */
+
+.titulo {
+    grid-area: tituloProd;
+    text-align: center;
+    font-size: larger;
+    background-color: $color-secundario;
+}
+
+.tarjetas {
+    display: flex;
+    justify-content: center;
+    background-image: url(../img/fondoRosa.webp);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.botonComprar {
+    background-color: $color-boton;
+    border: solid $color-borde;
+    color: $color-texto-secundario;
+    &:hover{
+        background-color: $color-primario;
+        border: solid $color-borde;
+    }
+}
