@@ -1,5 +1,6 @@
 /* COLORES */
 /* FUNTES */
+/* POSICION */
 * {
   margin: 0;
   padding: 0; }
@@ -10,10 +11,9 @@ body {
 
 /* Index */
 .logo {
-  grid-area: header;
-  border-radius: 50%;
-  height: 200px;
   width: 200px;
+  height: 200px;
+  border-radius: 50%;
   margin: auto;
   border-radius: 25%;
   padding: 30px; }
@@ -55,6 +55,7 @@ nav ul {
   margin: 15px;
   padding: 15px;
   font-weight: bold;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.5;
   font-style: italic;
   border: outset;
@@ -98,7 +99,6 @@ footer {
 
 /* Productos */
 .titulo {
-  grid-area: tituloProd;
   text-align: center;
   font-size: larger;
   background-color: lightpink; }
@@ -110,10 +110,61 @@ footer {
   background-size: cover;
   background-attachment: fixed; }
 
-.botonComprar {
+.botonComprar, .formulario .formularioContacto li .boton {
   background-color: pink;
   border: solid salmon;
   color: #fff; }
-  .botonComprar:hover {
+  .botonComprar:hover, .formulario .formularioContacto li .boton:hover {
     background-color: lightgrey;
     border: solid salmon; }
+
+/* Tratamientos */
+.trat1 {
+  background-image: linear-gradient(to bottom, lightpink, lightgrey);
+  padding: 40px; }
+
+.trat2 {
+  background-image: linear-gradient(to bottom, lightgrey, lightpink);
+  padding: 40px; }
+
+.trat3 {
+  background-image: linear-gradient(to bottom, lightpink, lightgrey);
+  padding: 40px; }
+
+.trat4 {
+  background-image: linear-gradient(to bottom, lightgrey, lightpink);
+  padding: 40px; }
+
+.trat5 {
+  background-image: linear-gradient(to bottom, lightpink, lightgrey);
+  padding: 15px; }
+
+/* Sucursales */
+.sucursales {
+  background-image: url(../img/fondoSuc.webp);
+  background-size: cover;
+  background-attachment: fixed; }
+
+/* Contacto */
+.formulario {
+  background-image: url(../img/fondoContacto.webp);
+  background-size: cover;
+  background-attachment: fixed; }
+  .formulario .formularioContacto {
+    padding: 20px;
+    width: 100%;
+    max-width: 60%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .formulario .formularioContacto li {
+      list-style: none;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      padding: 10px; }
+      .formulario .formularioContacto li .boton {
+        width: 90px;
+        height: 30px; }
