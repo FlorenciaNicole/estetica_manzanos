@@ -7,17 +7,19 @@
 }
 
 body {
-    background-image: linear-gradient(to top, lightgrey, white);
-    text-align: map-get($posicion, centro);
+    background-image: linear-gradient(to top, $color-primario, white);
 }
 
 /* Index */
 .logo {
-    @include sizes(200px, 200px);
-    border-radius: 50%;
+    @include sizes(180px, 180px);
     margin: auto;
     border-radius: 25%;
-    padding: 30px;
+    padding: 10px;
+    &:hover {
+        box-shadow: 0 0 10px $color-borde;
+        transition: all .5s;
+    }
 }
 
 nav ul {
@@ -25,25 +27,25 @@ nav ul {
     flex-direction: column;
     margin: 0;
     padding: 1px;
-    align-items: map-get($posicion, centro);
 
     li {
         margin: 1px;
         padding: 5px;
         list-style: none;
         font-family: $font-principal;
+        text-align: map-get($posicion, centro);
 
         a {
             margin: 1px;
             padding: 10px;
-            background-color: #F7B2AD;
+            background-color: $color-boton;
             color: rgb(255, 255, 255);
             text-decoration: none;
             border-radius: 10px;
             font-family: $font-principal;
 
             &:hover {
-                background-image: linear-gradient(lightcoral, white);
+                background-image: linear-gradient(magenta, white);
                 transform: scale(1.1);
                 transition: all .5s;
 
@@ -51,6 +53,7 @@ nav ul {
         }
     }
 }
+
 
 .tituloTexto {
     padding: 5px;
@@ -60,6 +63,7 @@ nav ul {
     color: $color-texto-primario;
     animation: zoomIn;
     animation-duration: 2s;
+    text-align: map-get($posicion, centro);
 }
 
 .textoInicio {
@@ -69,18 +73,28 @@ nav ul {
     font-family: $font-principal;
     line-height: 1.5;
     font-style: italic;
-    border: outset;
+    border-radius: 10px;
     background-color: $color-secundario;
-    text-align: justify;
+    text-align: map-get($posicion, centro);
 }
 
 .imgPrincipal {
     @include sizes(800px, 400px);
+    padding-bottom: 15px;
+}
+
+.servicios .tarjeta:hover {
+    transform: scale(1.1);
+    transition: all .5s;
+    opacity: 0.8;
+    text-shadow: 0 0 10px $color-borde;
 }
 
 .textoFinal {
-    padding: 15px;
+    padding: 30px;
     font-family: $font-principal;
+    text-align: map-get($posicion, centro);
+    text-shadow: 0 0 10px $color-borde;
 }
 
 footer {
@@ -132,6 +146,7 @@ footer {
     background-image: url(../img/fondoRosa.webp);
     background-size: cover;
     background-attachment: fixed;
+    text-align: map-get($posicion, centro);
 }
 
 .botonComprar {
@@ -178,6 +193,8 @@ footer {
     background-image: url(../img/fondoSuc.webp);
     background-size: cover;
     background-attachment: fixed;
+    text-align: map-get($posicion, centro);
+    padding: 30px;
 }
 
 /* Contacto */
@@ -188,21 +205,17 @@ footer {
     background-attachment: fixed;
 
     .formularioContacto {
-        padding: 20px;
-        width: 100%;
-        max-width: 60%;
-        margin: 0 auto;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        padding: 10px;
         align-items: center;
 
         li {
             list-style: none;
-            text-align: center;
             display: flex;
             flex-direction: column;
             padding: 10px;
+            text-align: map-get($posicion, centro);
 
             .boton {
                 @extend .botonComprar;
