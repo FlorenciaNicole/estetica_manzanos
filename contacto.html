@@ -44,7 +44,7 @@
 </head>
 
 <body class="inicio">
-    <div class="gridContainerContacto">
+    <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <div class="container-fluid">
                 <a href="index.html">
@@ -84,50 +84,48 @@
             <h3>FORMULARIO DE CONTACTO</h3>
         </div>
         <section class="formulario">
-            <form class="formularioContacto" action="" method=get>
-                <ul>
-                    <li><input type="text" id="" placeholder="Nombre"></li>
-                    <li><input type="email" id="" placeholder="Email"></li>
-                    <li><input type="tel" id="" placeholder="Teléfono"></li>
-                    <li>
-                        <div><strong>Sucursal</strong></div>
-                        <select name="Sucursales">
-                            <option value="">Elija una opcion...</option>
-                            <option value="">Pilar</option>
-                            <option value="">Palermo</option>
-                            <option value="">San Isidro</option>
-                        </select>
-                    </li>
-                    <li>
-                        <div><strong>Tratamiento</strong></div>
-                        <select name="Tratamientos">
-                            <option value="">Elija una opcion...</option>
-                            <option value="">Adiposidad</option>
-                            <option value="">Modelado corporal</option>
-                            <option value="">Flacidez</option>
-                            <option value="">Tratamiento antiage</option>
-                            <option value="">Celulitis</option>
-                            <option value="">Depilación definitiva</option>
-                            <option value="">Botox</option>
-                            <option value="">Limpieza facial</option>
-                        </select>
-                    </li>
-                    <li>
-                        <textarea name="" id="" placeholder="Ingrese su consulta" cols="35" rows="10"></textarea>
-                    </li>
-                    <li>
-                        <span>
-                            Suscribite a nuestro newsletter
-                            <input type="checkbox" name="" id="" placeholder="Suscribite">
-                        </span>
-                        <span>
-                            <input class="boton" type="submit" value="Enviar">
-                            <input class="boton" type="reset" value="Limpiar">
-                        </span>
-                    </li>
-                </ul>
+            <form class="mx-auto formularioContacto">
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Nombre y apellido</label>
+                    <input type="text" class="form-control" placeholder="Nombre"
+                        aria-label="Nombre" aria-describedby="button-addon2">
+                </div>
+                <br>
+                <div class="mb-3">
+                    <label for="exampleFormControlInput1" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="exampleFormControlInput1"
+                        placeholder="nombre@mail.com">
+                </div>
+                <hr>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Sucursal</option>
+                    <option value="1">Pilar</option>
+                    <option value="2">San Isidro</option>
+                    <option value="3">Palermo</option>
+                </select>
+                <br>
+                <select class="form-select" aria-label="Default select example">
+                    <option selected>Tratamiento</option>
+                    <option value="">Adiposidad</option>
+                    <option value="">Modelado corporal</option>
+                    <option value="">Flacidez</option>
+                    <option value="">Tratamiento antiage</option>
+                    <option value="">Celulitis</option>
+                    <option value="">Depilación definitiva</option>
+                    <option value="">Botox</option>
+                    <option value="">Limpieza facial</option>
+                </select>
+                <div class="mb-3">
+                    <label for="exampleFormControlTextarea1" class="form-label">Consulta</label>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <div class="mb-3 form-check">
+                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                        <label class="form-check-label" for="exampleCheck1">Suscribite a nuestro newsletter</label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">ENVIAR</button>
             </form>
         </section>
+
         <!-- Pie de Pagina -->
         <footer class="footer">
             <div>

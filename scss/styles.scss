@@ -16,6 +16,7 @@ body {
     margin: auto;
     border-radius: 25%;
     padding: 10px;
+
     &:hover {
         box-shadow: 0 0 10px $color-borde;
         transition: all .5s;
@@ -104,24 +105,29 @@ footer {
     background: $color-secundario;
     width: 100%;
     text-align: map-get($posicion, centro);
-    padding: 20px;
+    padding: 5px;
     font-family: $font-principal;
 
+    a {
+        color: $color-texto-secundario;
+
+        img {
+            padding: 10px;
+            width: auto;
+            vertical-align: middle;
+            text-align: map-get($posicion, centro);
+
+        }
+    }
+}
+
+footer {
     p {
         color: $color-texto-secundario;
         font-size: 12px;
         text-align: map-get($posicion, centro);
+        padding-top: 15px;
 
-        a {
-            color: $color-texto-secundario;
-
-            img {
-                padding: 0 0 0 10px;
-                width: auto;
-                vertical-align: middle;
-                text-align: map-get($posicion, centro);
-            }
-        }
     }
 }
 
@@ -187,6 +193,15 @@ footer {
     padding: 15px;
 }
 
+.tratamientos {
+    .btn {
+        &:hover {
+            background-color: $color-secundario;
+            border: solid $color-texto-secundario;
+        }
+    }
+}
+
 /* Sucursales */
 
 .sucursales {
@@ -195,6 +210,11 @@ footer {
     background-attachment: fixed;
     text-align: map-get($posicion, centro);
     padding: 30px;
+
+    .mapa {
+        width: 70%;
+        padding-bottom: 30px;
+    }
 }
 
 /* Contacto */
@@ -203,25 +223,13 @@ footer {
     background-image: url(../img/fondoContacto.webp);
     background-size: cover;
     background-attachment: fixed;
+    padding: 20px;
 
     .formularioContacto {
-        display: flex;
-        flex-direction: column;
-        padding: 10px;
-        align-items: center;
+        width: 50%;
 
-        li {
-            list-style: none;
-            display: flex;
-            flex-direction: column;
-            padding: 10px;
-            text-align: map-get($posicion, centro);
-
-            .boton {
-                @extend .botonComprar;
-                @include sizes (90px, 30px);
-            }
+        .btn {
+            @extend .botonComprar;
         }
     }
-
 }
