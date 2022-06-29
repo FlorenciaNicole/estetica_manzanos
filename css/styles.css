@@ -24,6 +24,9 @@ body {
     width: 100px;
     height: 100px; } }
 
+.menu {
+  border-bottom: solid palevioletred; }
+
 nav ul {
   display: flex;
   flex-direction: column;
@@ -49,7 +52,7 @@ nav ul {
         transition: all .5s; }
 
 .tituloTexto {
-  padding: 5px;
+  padding-top: 15px;
   margin: 5px;
   font-family: "Montserrat", sans-serif;
   text-shadow: 0 0 10px salmon;
@@ -57,6 +60,8 @@ nav ul {
   animation: zoomIn;
   animation-duration: 2s;
   text-align: center; }
+  .tituloTexto h2 {
+    margin: 0px; }
 
 .textoInicio {
   margin: 15px;
@@ -119,6 +124,8 @@ footer p {
   text-align: center;
   font-size: larger;
   background-color: palevioletred; }
+  .titulo h3 {
+    margin: 0px; }
 
 .tarjetas {
   display: flex;

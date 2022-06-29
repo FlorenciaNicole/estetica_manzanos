@@ -28,6 +28,9 @@ body {
         @include sizes(100px, 100px);
     }
 }
+.menu {
+    border-bottom: solid palevioletred;
+}
 
 nav ul {
     display: flex;
@@ -63,7 +66,7 @@ nav ul {
 
 
 .tituloTexto {
-    padding: 5px;
+    padding-top: 15px;
     margin: 5px;
     font-family: $font-principal;
     text-shadow: 0 0 10px $color-borde;
@@ -71,6 +74,9 @@ nav ul {
     animation: zoomIn;
     animation-duration: 2s;
     text-align: map-get($posicion, centro);
+    h2{
+        margin: 0px;
+    }
 }
 
 .textoInicio {
@@ -149,7 +155,11 @@ footer {
     text-align: map-get($posicion, centro);
     font-size: larger;
     background-color: $color-secundario;
+    h3 {
+        margin: 0px;
+    }
 }
+
 
 .tarjetas {
     display: flex;
