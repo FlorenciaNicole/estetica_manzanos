@@ -19,6 +19,11 @@ body {
     box-shadow: 0 0 10px salmon;
     transition: all .5s; }
 
+@media screen and (max-width: 991px) {
+  .logo {
+    width: 100px;
+    height: 100px; } }
+
 nav ul {
   display: flex;
   flex-direction: column;
@@ -33,13 +38,13 @@ nav ul {
     nav ul li a {
       margin: 1px;
       padding: 10px;
-      background-color: violet;
+      background-color: lightpink;
       color: white;
       text-decoration: none;
       border-radius: 10px;
       font-family: "Montserrat", sans-serif; }
       nav ul li a:hover {
-        background-image: linear-gradient(magenta, white);
+        background-image: linear-gradient(lightpink, white);
         transform: scale(1.1);
         transition: all .5s; }
 
@@ -71,7 +76,7 @@ nav ul {
 
 .servicios .tarjeta:hover {
   transform: scale(1.1);
-  transition: all .5s;
+  transition: all .2s;
   opacity: 0.8;
   text-shadow: 0 0 10px salmon; }
 
@@ -122,10 +127,11 @@ footer p {
   background-image: url(../img/fondoRosa.webp);
   background-size: cover;
   background-attachment: fixed;
-  text-align: center; }
+  text-align: center;
+  padding: 20px; }
 
 .botonComprar, .formulario .formularioContacto .btn {
-  background-color: violet;
+  background-color: lightpink;
   border: solid salmon;
   color: #fff; }
   .botonComprar:hover, .formulario .formularioContacto .btn:hover {

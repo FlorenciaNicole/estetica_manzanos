@@ -23,6 +23,12 @@ body {
     }
 }
 
+@media screen and (max-width: 991px) {
+    .logo {
+        @include sizes(100px, 100px);
+    }
+}
+
 nav ul {
     display: flex;
     flex-direction: column;
@@ -46,7 +52,7 @@ nav ul {
             font-family: $font-principal;
 
             &:hover {
-                background-image: linear-gradient(magenta, white);
+                background-image: linear-gradient($color-boton, white);
                 transform: scale(1.1);
                 transition: all .5s;
 
@@ -86,7 +92,7 @@ nav ul {
 
 .servicios .tarjeta:hover {
     transform: scale(1.1);
-    transition: all .5s;
+    transition: all .2s;
     opacity: 0.8;
     text-shadow: 0 0 10px $color-borde;
 }
@@ -153,6 +159,7 @@ footer {
     background-size: cover;
     background-attachment: fixed;
     text-align: map-get($posicion, centro);
+    padding: 20px;
 }
 
 .botonComprar {
