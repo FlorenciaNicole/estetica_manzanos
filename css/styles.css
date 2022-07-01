@@ -6,7 +6,7 @@
   padding: 0; }
 
 body {
-  background-image: linear-gradient(to top, darkgrey, white); }
+  background-image: linear-gradient(to top, lightgrey, white); }
 
 /* Index */
 .logo {
@@ -52,15 +52,14 @@ nav ul {
         transition: all .5s; }
 
 .tituloTexto {
-  padding-top: 15px;
-  margin: 5px;
+  padding: 35px 20px 20px 20px;
   font-family: "Montserrat", sans-serif;
   text-shadow: 0 0 10px salmon;
   color: grey;
   animation: zoomIn;
   animation-duration: 2s;
   text-align: center; }
-  .tituloTexto h2 {
+  .tituloTexto h1 {
     margin: 0px; }
 
 .textoInicio {
@@ -72,18 +71,24 @@ nav ul {
   font-style: italic;
   border-radius: 10px;
   background-color: palevioletred;
-  text-align: center; }
+  text-align: left; }
 
 .imgPrincipal {
   width: 800px;
   height: 400px;
   padding-bottom: 15px; }
 
-.servicios .tarjeta:hover {
-  transform: scale(1.1);
+.servicios {
+  padding: 10px; }
+
+.tarjeta:hover {
+  transform: scale(1.05);
   transition: all .2s;
-  opacity: 0.8;
   text-shadow: 0 0 10px salmon; }
+
+.masInfo {
+  text-decoration: none;
+  color: salmon; }
 
 .textoFinal {
   padding: 30px;
@@ -130,7 +135,7 @@ footer p {
 .tarjetas {
   display: flex;
   justify-content: center;
-  background-image: url(../img/fondoRosa.webp);
+  background-image: url(../img/fondoProd.webp);
   background-size: cover;
   background-attachment: fixed;
   text-align: center;
@@ -141,29 +146,29 @@ footer p {
   border: solid salmon;
   color: #fff; }
   .botonComprar:hover, .formulario .formularioContacto .btn:hover {
-    background-color: darkgrey;
+    background-color: lightgrey;
     border: solid salmon; }
 
 /* Tratamientos */
 .trat1 {
-  background-image: linear-gradient(to bottom, palevioletred, darkgrey);
+  background-image: linear-gradient(to bottom, palevioletred, lightgrey);
   padding: 40px; }
 
 .trat2 {
-  background-image: linear-gradient(to bottom, darkgrey, palevioletred);
+  background-image: linear-gradient(to bottom, lightgrey, palevioletred);
   padding: 40px; }
 
 .trat3 {
-  background-image: linear-gradient(to bottom, palevioletred, darkgrey);
+  background-image: linear-gradient(to bottom, palevioletred, lightgrey);
   padding: 40px; }
 
 .trat4 {
-  background-image: linear-gradient(to bottom, darkgrey, palevioletred);
+  background-image: linear-gradient(to bottom, lightgrey, palevioletred);
   padding: 40px; }
 
 .trat5 {
-  background-image: linear-gradient(to bottom, palevioletred, darkgrey);
-  padding: 15px; }
+  background-image: linear-gradient(to bottom, palevioletred, lightgrey);
+  padding: 40px; }
 
 .tratamientos .btn:hover {
   background-color: palevioletred;

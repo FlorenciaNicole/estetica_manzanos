@@ -28,6 +28,7 @@ body {
         @include sizes(100px, 100px);
     }
 }
+
 .menu {
     border-bottom: solid palevioletred;
 }
@@ -66,15 +67,15 @@ nav ul {
 
 
 .tituloTexto {
-    padding-top: 15px;
-    margin: 5px;
+    padding: 35px 20px 20px 20px;
     font-family: $font-principal;
     text-shadow: 0 0 10px $color-borde;
     color: $color-texto-primario;
     animation: zoomIn;
     animation-duration: 2s;
     text-align: map-get($posicion, centro);
-    h2{
+
+    h1 {
         margin: 0px;
     }
 }
@@ -88,7 +89,7 @@ nav ul {
     font-style: italic;
     border-radius: 10px;
     background-color: $color-secundario;
-    text-align: map-get($posicion, centro);
+    text-align: map-get($posicion, izq);
 }
 
 .imgPrincipal {
@@ -96,12 +97,19 @@ nav ul {
     padding-bottom: 15px;
 }
 
-.servicios .tarjeta:hover {
-    transform: scale(1.1);
-    transition: all .2s;
-    opacity: 0.8;
-    text-shadow: 0 0 10px $color-borde;
+.servicios {
+    padding: 10px;
 }
+.tarjeta:hover {
+        transform: scale(1.05);
+        transition: all .2s;
+        text-shadow: 0 0 10px $color-borde;
+    }
+
+.masInfo{
+        text-decoration: none;
+        color: $color-borde;
+    }
 
 .textoFinal {
     padding: 30px;
@@ -155,6 +163,7 @@ footer {
     text-align: map-get($posicion, centro);
     font-size: larger;
     background-color: $color-secundario;
+
     h3 {
         margin: 0px;
     }
@@ -164,7 +173,7 @@ footer {
 .tarjetas {
     display: flex;
     justify-content: center;
-    background-image: url(../img/fondoRosa.webp);
+    background-image: url(../img/fondoProd.webp);
     background-size: cover;
     background-attachment: fixed;
     text-align: map-get($posicion, centro);
@@ -206,7 +215,7 @@ footer {
 
 .trat5 {
     background-image: linear-gradient(to bottom, $color-secundario, $color-primario);
-    padding: 15px;
+    padding: 40px;
 }
 
 .tratamientos {
